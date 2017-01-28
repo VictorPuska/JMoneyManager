@@ -1,0 +1,35 @@
+JFDML JFormDesigner: "5.2.5.1.342" Java: "1.8.0_112-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "components.AppPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:52:p, par l {comp label1:::p::p, par t:l::p {comp buttonImports::l:::x, comp buttonImport::l:::x, comp buttonAccounts::l:::x}}, space ::380:x}}"
+			"$verticalGroup": "par l {seq l {space :p:42:p, comp label1:::p::p, space :p:35:p, comp buttonAccounts:::p::p, space s:::p, comp buttonImport:::p::p, space s:::p, comp buttonImports:::p::p, space ::177:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "This is the home page"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonAccounts"
+				"text": "Accounts"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "accountsClick", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonImport"
+				"text": "Import"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonImportClick", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonImports"
+				"text": "Imports"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonImportsClick", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 555, 390 )
+		} )
+	}
+}

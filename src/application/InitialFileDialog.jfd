@@ -1,0 +1,75 @@
+JFDML JFormDesigner: "5.2.3.0.281" Java: "1.8.0_77" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$locationPolicy": 1
+			"$sizePolicy": 1
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {par l {seq {space :::p, comp mmLabel:::p::p}, seq l {space :p:43:p, par t {comp okButton:::p:74:p, seq {comp dbIconLabel:::p::p, space :p:30:p, par l {comp textPane::l:p:314:p, comp createOption::l:p::p, comp existingOption::l:p::p, seq l {par l {seq l {comp selectFileLabel:::p::p, space :p:79:p}, seq t {comp fileText:::p:387:p, space :::p}}, comp searchButton:::p::p}}}}}}, space ::98:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp mmLabel:::p::p, space :p:48:p, par l {comp dbIconLabel:::p::p, seq {comp textPane:::p::p, space :p:27:p, comp createOption:::p::p, space :::p, comp existingOption:::p::p}}, space :p:33:p, comp selectFileLabel:::p::p, space :::p, par l {comp searchButton:::p::p, comp fileText::l:p::p}, space :p:36:p, comp okButton:::p::p, space ::139:x}}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"focusable": false
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "mmLabel"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/moneymanger.png" )
+				} )
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "textPane"
+					"text": "No money.manager database has be associated with the program.  Please create a database or select an existing one."
+					"editable": false
+					"opaque": false
+					"focusable": false
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "createOption"
+					"text": "Create new database"
+					"selected": true
+					"$buttonGroup": new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "existingOption"
+					"text": "Open existing database"
+					"$buttonGroup": new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "dbIconLabel"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/2000px-Applications-database.svg.png" )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "fileText"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "searchButton"
+					"text": "..."
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "searchButtonMouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "selectFileLabel"
+					"text": "Selected file:"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "okButton"
+					"text": "Ok"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 10 )
+			"size": new java.awt.Dimension( 745, 475 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 40, 466 )
+		} )
+	}
+}

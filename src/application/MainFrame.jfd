@@ -1,0 +1,75 @@
+JFDML JFormDesigner: "5.2.5.1.342" Java: "1.8.0_112-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "money.manager"
+			"background": new java.awt.Color( 255, 204, 204, 255 )
+			"$sizePolicy": 1
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "thisWindowClosing", true ) )
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentMoved", "thisComponentMoved", true ) )
+			addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentResized", "thisComponentResized", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 1
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) ) {
+					name: "headingPanel"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"maximumSize": new java.awt.Dimension( 32767, 48 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "headingLabel"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/moneymanger.png" )
+					} )
+					add( new FormComponent( "com.jformdesigner.designer.wrapper.HSpacer" ) {
+						name: "hSpacer1"
+						"opaque": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "homeLabel"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/Home 24x24.png" )
+						"preferredSize": new java.awt.Dimension( 32, 32 )
+						"horizontalAlignment": 0
+						"minimumSize": new java.awt.Dimension( 28, 28 )
+						"maximumSize": new java.awt.Dimension( 28, 28 )
+						"background": new java.awt.Color( 234, 234, 247, 255 )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "mouseHover", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "mouseLeave", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "homeLabelMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "settingsLabel"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/Gears-icon.png" )
+						"cursor": new java.awt.Cursor( 12 )
+						"background": new java.awt.Color( 234, 234, 247, 255 )
+						"toolTipText": "Settings"
+						"border": new javax.swing.border.EmptyBorder( 2, 2, 2, 2 )
+						"preferredSize": new java.awt.Dimension( 32, 32 )
+						"horizontalAlignment": 0
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "mouseHover", true ) )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "mouseLeave", true ) )
+					} )
+					add( new FormComponent( "com.jformdesigner.designer.wrapper.HSpacer" ) {
+						name: "hSpacer2"
+						"maximumSize": new java.awt.Dimension( 20, 12 )
+						"minimumSize": new java.awt.Dimension( 20, 12 )
+						"preferredSize": new java.awt.Dimension( 20, 12 )
+						"opaque": false
+					} )
+				} )
+				add( new FormComponent( "components.AppPanelManager" ) {
+					name: "appManager"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 775, 600 )
+		} )
+	}
+}

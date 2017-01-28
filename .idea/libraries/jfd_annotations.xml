@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jfd-annotations">
+    <CLASSES>
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/JFormDesigner/redist/jfd-annotations.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
